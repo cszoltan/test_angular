@@ -1,0 +1,21 @@
+<div *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
+  </div>
+  <div>
+    <label>role:
+      <!--input [(ngModel)]="hero.role" placeholder="role"/-->
+      <select [(ngModel)]="hero.role">
+        <ng-container *ngFor="let r of roles">
+            <option [ngValue]="r">{{r}}</option>
+        </ng-container>
+      </select>
+    </label>
+  </div>
+  <button (click)="save()">save</button>
+  <button (click)="goBack()">go back</button>
+</div>
