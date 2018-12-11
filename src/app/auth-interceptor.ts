@@ -22,7 +22,6 @@ export class AuthInterceptor implements HttpInterceptor {
 		} else {
 			throw "Access token does not exist for heroes app.";
 		}
-		
     }
 
     getAccessTokenFromCache(): boolean {
