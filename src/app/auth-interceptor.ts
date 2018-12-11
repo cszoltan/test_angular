@@ -30,5 +30,5 @@ export class AuthInterceptor implements HttpInterceptor {
 			return true;
 		} 
 		return false;
-	};
+	}
 }
