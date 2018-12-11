@@ -18,3 +18,8 @@ steps:
     npm install
     ng build --prod --base-href https://staticauthtest.z6.web.core.windows.net/
   displayName: 'npm install and build'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
