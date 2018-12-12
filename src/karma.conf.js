@@ -7,8 +7,8 @@ module.exports = function (config) {
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),
+      require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
-      require('karma-phantomjs-launcher'),
       require('karma-coverage-istanbul-reporter'),
       require('karma-junit-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
@@ -37,7 +37,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     captureTimeout: 99999,
-    browsers: ['PhantomJS'],
+    browsers: ['ChromeHeadless'],
     singleRun: false
   });
 };
