@@ -1,20 +1,39 @@
 <?xml version="1.0"?>
-<testsuite name="HeadlessChrome 0.0.0 (Windows 10 0.0.0)" package="" timestamp="2018-12-12T11:35:42" id="0" hostname="SZ2G4" tests="12" errors="0" failures="0" time="0.435">
+<testsuite name="HeadlessChrome 0.0.0 (Windows 10 0.0.0)" package="" timestamp="2018-12-12T11:43:09" id="0" hostname="SZ2G4" tests="12" errors="0" failures="1" time="0.452">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/70.0.3538.110 Safari/537.36"/>
   </properties>
-  <testcase name="AppComponent should have as title 'Tour of Heroes'" time="0.039" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).AppComponent"/>
-  <testcase name="AppComponent should render title in a h1 tag" time="0.034" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).AppComponent"/>
+  <testcase name="AppComponent should create the app" time="0.085" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).AppComponent"/>
+  <testcase name="AppComponent should have as title 'Tour of Heroes'" time="0.034" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).AppComponent"/>
+  <testcase name="AppComponent should render title in a h1 tag" time="0.03" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).AppComponent"/>
   <testcase name="ConfirmationDialogComponent should create" time="0.034" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).ConfirmationDialogComponent"/>
-  <testcase name="DashboardComponent should be created" time="0.033" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).DashboardComponent"/>
-  <testcase name="HeroDetailComponent should create" time="0.044" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).HeroDetailComponent"/>
-  <testcase name="HeroService should be created" time="0.038" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).HeroService"/>
-  <testcase name="HeroesComponent should be created" time="0.033" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).HeroesComponent"/>
-  <testcase name="MessageService should be created" time="0.022" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).MessageService"/>
-  <testcase name="MessagesComponent should be created" time="0.024" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).MessagesComponent"/>
-  <testcase name="MsalService should be created" time="0.021" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).MsalService"/>
-  <testcase name="SearchComponent should create" time="0.026" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).SearchComponent"/>
-  <testcase name="AppComponent should create the app" time="0.087" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).AppComponent"/>
+  <testcase name="DashboardComponent should be created" time="0.079" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).DashboardComponent">
+    <failure type="">Error: Illegal state: Could not load the summary for directive DashboardComponent.
+    at syntaxError (http://localhost:9876/node_modules/@angular/compiler/fesm5/compiler.js?:2427:1)
+    at CompileMetadataResolver.push../node_modules/@angular/compiler/fesm5/compiler.js.CompileMetadataResolver.getDirectiveSummary (http://localhost:9876/node_modules/@angular/compiler/fesm5/compiler.js?:18241:1)
+    at JitCompiler.push../node_modules/@angular/compiler/fesm5/compiler.js.JitCompiler.getComponentFactory (http://localhost:9876/node_modules/@angular/compiler/fesm5/compiler.js?:25665:1)
+    at CompilerImpl.push../node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js.CompilerImpl.getComponentFactory (http://localhost:9876/node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js?:162:1)
+    at TestingCompilerImpl.push../node_modules/@angular/platform-browser-dynamic/fesm5/testing.js.TestingCompilerImpl.getComponentFactory (http://localhost:9876/node_modules/@angular/platform-browser-dynamic/fesm5/testing.js?:110:1)
+    at TestBedViewEngine.push../node_modules/@angular/core/fesm5/testing.js.TestBedViewEngine.createComponent (http://localhost:9876/node_modules/@angular/core/fesm5/testing.js?:1862:1)
+    at Function.push../node_modules/@angular/core/fesm5/testing.js.TestBedViewEngine.createComponent (http://localhost:9876/node_modules/@angular/core/fesm5/testing.js?:1554:1)
+    at UserContext.&lt;anonymous&gt; (http://localhost:9876/src/app/dashboard/dashboard.component.spec.ts?:28:23)
+    at ZoneDelegate../node_modules/zone.js/dist/zone.js.ZoneDelegate.invoke (http://localhost:9876/node_modules/zone.js/dist/zone.js?:388:1)
+    at ProxyZoneSpec.push../node_modules/zone.js/dist/zone-testing.js.ProxyZoneSpec.onInvoke (http://localhost:9876/node_modules/zone.js/dist/zone-testing.js?:288:1)
+</failure>
+    <failure type="">Expected undefined to be truthy.
+    at UserContext.&lt;anonymous&gt; (http://localhost:9876/src/app/dashboard/dashboard.component.spec.ts?:34:23)
+    at ZoneDelegate../node_modules/zone.js/dist/zone.js.ZoneDelegate.invoke (http://localhost:9876/node_modules/zone.js/dist/zone.js?:388:1)
+    at ProxyZoneSpec.push../node_modules/zone.js/dist/zone-testing.js.ProxyZoneSpec.onInvoke (http://localhost:9876/node_modules/zone.js/dist/zone-testing.js?:288:1)
+    at ZoneDelegate../node_modules/zone.js/dist/zone.js.ZoneDelegate.invoke (http://localhost:9876/node_modules/zone.js/dist/zone.js?:387:1)
+</failure>
+  </testcase>
+  <testcase name="HeroDetailComponent should create" time="0.039" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).HeroDetailComponent"/>
+  <testcase name="HeroService should be created" time="0.028" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).HeroService"/>
+  <testcase name="HeroesComponent should be created" time="0.03" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).HeroesComponent"/>
+  <testcase name="MessageService should be created" time="0.021" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).MessageService"/>
+  <testcase name="MessagesComponent should be created" time="0.023" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).MessagesComponent"/>
+  <testcase name="MsalService should be created" time="0.02" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).MsalService"/>
+  <testcase name="SearchComponent should create" time="0.029" classname="HeadlessChrome_0_0_0_(Windows_10_0_0_0).SearchComponent"/>
   <system-out>
     <![CDATA[
 ]]>
