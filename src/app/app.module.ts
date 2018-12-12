@@ -39,7 +39,8 @@ import { AuthInterceptor } from './auth-interceptor';
   providers: [
     ConfirmationDialogService,
     MsalService,
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent],
   entryComponents: [ConfirmationDialogComponent]
 })

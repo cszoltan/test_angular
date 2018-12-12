@@ -15,16 +15,18 @@ steps:
 
 - script: |
     npm install -g @angular/cli
+    npm install -g jasmine
+    npm install -g karma
     npm install
   displayName: 'npm install'
 
 - script: |
-    ng test
-  displayName: 'ng test'
+    ng test --reporter karma-junit-reporter
+  displayName: 'test project'
 
 - script: |
     ng build --prod --base-href https://staticauthtest.z6.web.core.windows.net/
-  displayName: 'ng build'
+  displayName: 'build project'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
