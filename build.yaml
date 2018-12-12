@@ -16,8 +16,15 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm install
+  displayName: 'npm install'
+
+- script: |
+    ng test
+  displayName: 'ng test'
+
+- script: |
     ng build --prod --base-href https://staticauthtest.z6.web.core.windows.net/
-  displayName: 'npm install and build'
+  displayName: 'ng build'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
