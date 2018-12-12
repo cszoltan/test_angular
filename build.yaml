@@ -15,8 +15,8 @@ steps:
 
 - script: |
     npm install -g @angular/cli
-    npm install -g jasmine
     npm install -g karma
+    npm install -g jasmine
     npm install karma-junit-reporter
     npm install
   displayName: 'npm install'
