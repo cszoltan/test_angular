@@ -22,7 +22,7 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    ng test
+    ng test --watch=false
   displayName: 'test project'
 
 - script: |
