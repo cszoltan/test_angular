@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as Msal from 'msal';
-import { environment} from './environment';
+import { environment } from '../environments/environment';
 
 @Injectable()
 export class MsalService {
@@ -13,7 +13,7 @@ export class MsalService {
         signUpSignInPolicy: "B2C_1_SiUpIn",
         b2cScopes: ["https://cszoltan.onmicrosoft.com/tohf/demo.read"]
     };
-    
+
     // Configure the authority for Azure AD B2C
     authority = "https://login.microsoftonline.com/tfp/" + this.tenantConfig.tenant + "/" + this.tenantConfig.signUpSignInPolicy;
 
@@ -21,7 +21,7 @@ export class MsalService {
      * B2C SignIn SignUp Policy Configuration
      */
     clientApplication = new Msal.UserAgentApplication(
-        this.tenantConfig.clientID, this.authority, 
+        this.tenantConfig.clientID, this.authority,
         function (errorDesc: any, token: any, error: any, tokenType: any) {
             // Called after loginRedirect or acquireTokenPopup
         }
@@ -53,6 +53,6 @@ export class MsalService {
     };
 
     isOnline(): boolean {
-        return this.clientApplication.getUser() != null; 
+        return this.clientApplication.getUser() != null;
     };
 }
