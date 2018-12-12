@@ -23,7 +23,6 @@ export class MsalService {
     clientApplication = new Msal.UserAgentApplication(
         this.tenantConfig.clientID, this.authority,
         function (errorDesc: any, token: any, error: any, tokenType: any) {
-            // Called after loginRedirect or acquireTokenPopup
         }
     );
 
