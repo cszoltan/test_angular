@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
-<testsuite name="Chrome 70.0.3538 (Windows 10 0.0.0)" package="" timestamp="2018-12-12T11:23:06" id="0" hostname="SZ2G4" tests="12" errors="0" failures="0" time="0.411">
+<testsuite name="Chrome 70.0.3538 (Windows 10 0.0.0)" package="" timestamp="2018-12-13T11:09:31" id="0" hostname="SZ2G4" tests="12" errors="0" failures="0" time="0.421">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36"/>
   </properties>
-  <testcase name="AppComponent should have as title 'Tour of Heroes'" time="0.037" classname="Chrome_70_0_3538_(Windows_10_0_0_0).AppComponent"/>
-  <testcase name="AppComponent should render title in a h1 tag" time="0.032" classname="Chrome_70_0_3538_(Windows_10_0_0_0).AppComponent"/>
-  <testcase name="ConfirmationDialogComponent should create" time="0.034" classname="Chrome_70_0_3538_(Windows_10_0_0_0).ConfirmationDialogComponent"/>
-  <testcase name="DashboardComponent should be created" time="0.036" classname="Chrome_70_0_3538_(Windows_10_0_0_0).DashboardComponent"/>
-  <testcase name="HeroDetailComponent should create" time="0.04" classname="Chrome_70_0_3538_(Windows_10_0_0_0).HeroDetailComponent"/>
-  <testcase name="HeroService should be created" time="0.021" classname="Chrome_70_0_3538_(Windows_10_0_0_0).HeroService"/>
+  <testcase name="AppComponent should create the app" time="0.082" classname="Chrome_70_0_3538_(Windows_10_0_0_0).AppComponent"/>
+  <testcase name="AppComponent should have as title 'Tour of Heroes'" time="0.035" classname="Chrome_70_0_3538_(Windows_10_0_0_0).AppComponent"/>
+  <testcase name="AppComponent should render title in a h1 tag" time="0.03" classname="Chrome_70_0_3538_(Windows_10_0_0_0).AppComponent"/>
+  <testcase name="ConfirmationDialogComponent should create" time="0.037" classname="Chrome_70_0_3538_(Windows_10_0_0_0).ConfirmationDialogComponent"/>
+  <testcase name="DashboardComponent should be created" time="0.033" classname="Chrome_70_0_3538_(Windows_10_0_0_0).DashboardComponent"/>
+  <testcase name="HeroDetailComponent should create" time="0.045" classname="Chrome_70_0_3538_(Windows_10_0_0_0).HeroDetailComponent"/>
+  <testcase name="HeroService should be created" time="0.02" classname="Chrome_70_0_3538_(Windows_10_0_0_0).HeroService"/>
   <testcase name="HeroesComponent should be created" time="0.037" classname="Chrome_70_0_3538_(Windows_10_0_0_0).HeroesComponent"/>
   <testcase name="MessageService should be created" time="0.02" classname="Chrome_70_0_3538_(Windows_10_0_0_0).MessageService"/>
-  <testcase name="MessagesComponent should be created" time="0.022" classname="Chrome_70_0_3538_(Windows_10_0_0_0).MessagesComponent"/>
-  <testcase name="MsalService should be created" time="0.021" classname="Chrome_70_0_3538_(Windows_10_0_0_0).MsalService"/>
-  <testcase name="SearchComponent should create" time="0.028" classname="Chrome_70_0_3538_(Windows_10_0_0_0).SearchComponent"/>
-  <testcase name="AppComponent should create the app" time="0.083" classname="Chrome_70_0_3538_(Windows_10_0_0_0).AppComponent"/>
+  <testcase name="MessagesComponent should be created" time="0.021" classname="Chrome_70_0_3538_(Windows_10_0_0_0).MessagesComponent"/>
+  <testcase name="MsalService should be created" time="0.022" classname="Chrome_70_0_3538_(Windows_10_0_0_0).MsalService"/>
+  <testcase name="SearchComponent should create" time="0.039" classname="Chrome_70_0_3538_(Windows_10_0_0_0).SearchComponent"/>
   <system-out>
     <![CDATA[
 ]]>

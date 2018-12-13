@@ -3,8 +3,11 @@ import { AppComponent } from './app.component';
 import {RouterTestingModule} from '@angular/router/testing'
 import {MessagesComponent} from './messages/messages.component'
 import { MsalService }  from './msal.service';
+import { MonitorService } from './monitor-service';
 
-beforeEach(() => { TestBed.configureTestingModule({ declarations: [ AppComponent, MessagesComponent ], imports: [ RouterTestingModule ], providers: [MsalService] })});
+let MonitorServiceStub: Partial<MonitorService>;
+
+beforeEach(() => { TestBed.configureTestingModule({ declarations: [ AppComponent, MessagesComponent ], imports: [ RouterTestingModule ], providers: [MsalService, {provide: MonitorService, useValue: MonitorServiceStub}] })});
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
