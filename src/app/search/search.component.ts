@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ReflectiveInjector } from '@angular/core';
 
 import { Observable, Subject } from 'rxjs';
 
@@ -8,6 +8,7 @@ import {
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
+import { MonitorService } from '../monitor-service';
 
 @Component({
   selector: 'app-hero-search',
@@ -17,8 +18,19 @@ import { HeroService } from '../hero.service';
 export class SearchComponent implements OnInit {
   heroes$: Observable<Hero[]>;
   private searchTerms = new Subject<string>();
+  private monitorService: MonitorService;
 
-  constructor(private heroService: HeroService) {}
+  constructor(private heroService: HeroService) {
+    const injector = ReflectiveInjector.resolveAndCreate([ 
+			MonitorService 
+		]); 
+		this.monitorService = injector.get(MonitorService); 
+		this.logNavigation(); 
+  }
+
+  private logNavigation() { 
+		this.monitorService.logPageView(); 
+	} 
 
   search(term: string): void {
     this.searchTerms.next(term);

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Location }     from '@angular/common';
 import { MsalService }  from './msal.service';
+import { MonitorService } from './monitor-service';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ export class AppComponent{
   title = 'Tour of Heroes';
 
   constructor(
+    private monitorService: MonitorService,
     private location: Location,
     private msalService: MsalService
   ){}

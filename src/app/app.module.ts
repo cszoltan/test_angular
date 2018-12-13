@@ -18,6 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './auth-interceptor';
+import { MonitorService } from './monitor-service';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { AuthInterceptor } from './auth-interceptor';
   providers: [
     ConfirmationDialogService,
     MsalService,
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    MonitorService
   ],
   bootstrap: [AppComponent],
   entryComponents: [ConfirmationDialogComponent]

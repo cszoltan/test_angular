@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  clientID: 'cf1b2262-31d1-4fad-9fc5-f4e1bde8f297'  
+  clientID: 'cf1b2262-31d1-4fad-9fc5-f4e1bde8f297',
+  appInsights: { 
+    instrumentationKey: 'e028778f-31e8-4926-b041-f9fd4b80fb53' 
+  }
 };
 
 /*

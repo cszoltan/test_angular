@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ReflectiveInjector } from '@angular/core';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { ConfirmationDialogService } from '../confirmation-dialog/confirmation-dialog.service';
+import { MonitorService } from '../monitor-service';
 
 
 @Component({
@@ -13,8 +14,19 @@ import { ConfirmationDialogService } from '../confirmation-dialog/confirmation-d
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
   access_token: string;
+  private monitorService: MonitorService;
 
-  constructor(private heroService: HeroService, private confirmationDialogService: ConfirmationDialogService) {}
+  constructor(private heroService: HeroService, private confirmationDialogService: ConfirmationDialogService) {
+    const injector = ReflectiveInjector.resolveAndCreate([ 
+			MonitorService 
+		]); 
+		this.monitorService = injector.get(MonitorService); 
+		this.logNavigation(); 
+  }
+
+  private logNavigation() { 
+		this.monitorService.logPageView(); 
+	} 
 
   ngOnInit() {
     this.getHeroes();
