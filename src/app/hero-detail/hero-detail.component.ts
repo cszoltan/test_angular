@@ -13,7 +13,7 @@ import { HeroService } from '../hero.service';
 export class HeroDetailComponent implements OnInit {
   hero: Hero;
   access_token: string;
-  roles: string[] = ['tank', 'dps', 'healer'];
+  roles: string[] = ['tank', 'dps', 'support'];
 
   constructor(
     private route: ActivatedRoute,

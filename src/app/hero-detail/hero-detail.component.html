@@ -11,7 +11,7 @@
       <!--input [(ngModel)]="hero.role" placeholder="role"/-->
       <select [(ngModel)]="hero.role">
         <ng-container *ngFor="let r of roles">
-            <option [ngValue]="r">{{r}}</option>
+            <option [ngValue]="r" [selected]="r==hero.role">{{r}}</option>
         </ng-container>
       </select>
     </label>

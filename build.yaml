@@ -25,6 +25,12 @@ steps:
     ng test --watch=false
   displayName: 'test project'
 
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testRunner: JUnit
+    testResultsFiles: '**/TESTS*.xml'
+
 - script: |
     ng build --prod --base-href https://staticauthtest.z6.web.core.windows.net/
   displayName: 'build project'

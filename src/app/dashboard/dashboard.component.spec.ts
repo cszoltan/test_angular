@@ -19,7 +19,7 @@ describe('DashboardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      //declarations: [ DashboardComponent ], providers: [{provide: HeroService, useValue: HeroServiceStub}]
+      declarations: [ DashboardComponent ], providers: [{provide: HeroService, useValue: HeroServiceStub}]
     })
     .compileComponents();
   }));

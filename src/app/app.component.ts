@@ -9,7 +9,6 @@ import { MsalService }  from './msal.service';
 })
 export class AppComponent{
   title = 'Tour of Heroes';
-  access_token: string;
 
   constructor(
     private location: Location,
